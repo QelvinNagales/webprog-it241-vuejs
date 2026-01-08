@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qelvin's Profile - Vue.js</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div id="app">
+        <div class="profile-container">
+            <div class="profile-header">
+                <h1>{{ name }}</h1>
+                <p class="tagline">{{ tagline }}</p>
+            </div>
+            
+            <div class="profile-section">
+                <h2>About Me</h2>
+                <p>{{ about }}</p>
+            </div>
+            
+            <div class="profile-section">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+                </ul>
+            </div>
+            
+            <div class="profile-section">
+                <h2>Interests</h2>
+                <ul class="interests-list">
+                    <li v-for="interest in interests" :key="interest">{{ interest }}</li>
+                </ul>
+            </div>
+            
+            <div class="profile-section">
+                <h2>Contact</h2>
+                <p>Email: {{ email }}</p>
+                <p>Location: {{ location }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
