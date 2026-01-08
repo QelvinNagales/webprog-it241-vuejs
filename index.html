@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World - Vue.js</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>My first Vue page</title>
+    <style>
+        #app {
+            display: inline-block;
+            padding: 10px;
+            font-size: x-large;
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        <h1>{{ message }}</h1>
-        <p>{{ description }}</p>
-        <button @click="changeMessage">Click Me!</button>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
-    <script src="js/app.js"></script>
+<h1>Vue Example</h1>
+
+The message is taken from 'data' inside the Vue instance by writing {{ message }} inside the div with id="app".
+
+<div id="app">
+    {{ message }}
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                message: 'Hello World!'
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+
 </body>
 </html>
