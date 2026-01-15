@@ -14,8 +14,15 @@
   {{ message }}
 </div>
 
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<div id="app2">
+  <h2>v-for Directive with Images</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img v-for="food in manyFoods" :src="food" alt="food image" style="width: 100px; height: 100px;">
+  </div>
+</div>
 
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/app.js"></script>
 <script src="js/image.js"></script>
 
 </body>
