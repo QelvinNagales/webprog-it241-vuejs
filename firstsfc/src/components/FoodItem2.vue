@@ -6,13 +6,13 @@
       <!-- First fruit card (example: Banana) -->
       <div class="fruit-card banana-card">
         <h2 class="fruit-name">Banana</h2>
-        <p class="fruit-text">I like banana</p>
+        <p class="fruit-text">I like Banana</p>
       </div>
 
       <!-- Second fruit card (example: Watermelon) -->
       <div class="fruit-card watermelon-card">
         <h2 class="fruit-name">Watermelon</h2>
-        <p class="fruit-text">I like watermelon</p>
+        <p class="fruit-text">I like Watermelon</p>
       </div>
     </div>
   </div>
@@ -40,19 +40,19 @@ export default {
   gap: 1rem;
 }
 
-/* base card style (like the santol/mango & durian boxes) */
+/* base card style (like the santol/mango & Watermelon boxes) */
 .fruit-card {
   padding: 1.5rem;
   border: 2px dashed #000;
   width: 220px;
 }
 
-/* banana = yellow */
+/* Banana = yellow */
 .banana-card {
-  background-color: #ffeb3b;
+background-color:  #ffeb3b;
 }
 
-/* watermelon = green-ish */
+/* Watermelon = green-ish */
 .watermelon-card {
   background-color: #8bc34a;
 }

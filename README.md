@@ -1,1 +1,1 @@
-# webprog-it241-vuejs
+import FoodItem2 from './components/FoodItem2.vue'# webprog-it241-vuejs
