@@ -1,1 +1,1 @@
-import FoodItem2 from './components/FoodItem2.vue'# webprog-it241-vuejs
+feature/01_supabase BRANCH
