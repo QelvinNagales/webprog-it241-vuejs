@@ -1,16 +1,17 @@
 <script setup>
-import PersonalProfile from './components/PersonalProfile.vue'
-import FoodItem from './components/FoodItem.vue'
-import FoodItem2 from './components/FoodItem2.vue'
+import { ref, onMounted } from 'vue'
+import { supabase } from './lib/supabaseClient'
+const instruments = ref([])
+async function getInstruments() {
+  const { data } = await supabase.from('instruments').select()
+  instruments.value = data
+}
+onMounted(() => {
+   getInstruments()
+})
 </script>
-
 <template>
-  <main>
-    <PersonalProfile />
-    <FoodItem />
-    <FoodItem2 />
-  </main>
+  <ul>
+    <li v-for="instrument in instruments" :key="instrument.id">{{ instrument.name }}</li>
+  </ul>
 </template>
-
-
-<style></style>
