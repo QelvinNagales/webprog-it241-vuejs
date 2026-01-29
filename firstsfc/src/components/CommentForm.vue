@@ -35,7 +35,7 @@
     try {
       const { error } = await supabase
         .from(tableName)
-        .insert([{ name: name.value, comment: comment.value }]);
+        .insert([{ Name: name.value, comment: comment.value }]);
   
       if (error) {
         console.error("Error inserting comment:", error);
