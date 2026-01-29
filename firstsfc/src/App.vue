@@ -1,7 +1,9 @@
 <template>
   <h1>Food</h1>
+  <IntroSection/>
   <food-item/>
-  <personal-profile/>
+  <food-item/>
+  <food-item2/>
   <comment-form/>
   <comment/>
    
